@@ -1,3 +1,7 @@
+## Description
+This application has a T3 stack for the frontend created with Next.js, Tailwind CSS, and TypeScript.
+There is a MySQL DB connected using a TypeScript API created with Axios. 
+
 ## Getting Started
 
 First, run the development server:
