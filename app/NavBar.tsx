@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import Link from 'next/link'
-import {AiFillBug} from 'react-icons/ai'
+import { HiAcademicCap } from "react-icons/hi2";
 import { usePathname } from 'next/navigation'
 import classNames from 'classnames'
 const NavBar = () => {
@@ -9,12 +9,12 @@ const NavBar = () => {
     const currentPath=usePathname();
     console.log(currentPath)
     const links=[
-        {label: 'Dashboard', href:"/"},
-        {label: 'Issues', href:"/issues"}
+        {label: 'Description', href:"/"},
+        {label: 'Issues', href:"/issues/new"}
     ]
   return (
     <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center">
-        <Link href="/" className='text-black'><AiFillBug/></Link>
+        <Link href="/" className='text-black'><HiAcademicCap /></Link>
         <ul className="flex space-x-6">
             {links.map(link => 
             <Link 

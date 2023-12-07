@@ -23,7 +23,11 @@ const NewIssuePage = () => {
     const [error,setError]= useState('');
 
     return (
-    <div className = "max-w-xl">
+    <div className = "justify-center">
+        <div className="justify-start text-gray-700 text-4xl py-4">
+            Submission Page
+        </div>
+        
         {error && <Callout.Root color = "red" className="mb-5">
             <Callout.Text>{error}</Callout.Text>
             </Callout.Root>}
