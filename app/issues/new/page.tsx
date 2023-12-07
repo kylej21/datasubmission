@@ -7,6 +7,9 @@ import axios from 'axios';
 import react, {useState} from "react";
 import { useRouter } from "next/navigation";
 import { Calligraffitti } from "next/font/google";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ZodSchema } from "zod";
+import { createSchema } from "@/app/createSchema";
 interface IssueForm{
     title: string;
     description: string;
@@ -14,7 +17,9 @@ interface IssueForm{
 
 const NewIssuePage = () => {
     const router = useRouter();
-    const {register, control, handleSubmit} = useForm<IssueForm>();
+    const {register, control, handleSubmit} = useForm<IssueForm>({
+        resolver: zodResolver(createSchema)
+    });
     const [error,setError]= useState('');
 
     return (
