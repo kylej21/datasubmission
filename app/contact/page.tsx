@@ -26,7 +26,7 @@ export default function Contact(){
                 <Link href="mailto:kylecj21@gmail.com">
                     <MdOutlineEmail className="w-40 h-40"/>
                 </Link>
-                <Link href="https://leetcode.com/kylecj21/1">
+                <Link href="https://leetcode.com/kylecj21">
                     <TbBrandLeetcode className="w-40 h-40"/>
                 </Link>
             </div>
