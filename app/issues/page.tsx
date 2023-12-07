@@ -54,7 +54,7 @@ const submitPage = () => {
             <TextField.Root className="h-40">
                 <TextField.Input placeholder='Description' {...register('description')}/>
             </TextField.Root>
-            <Button>Submit new issue</Button>
+            <Button>Submit Form</Button>
         </form>
     </div>
   )
