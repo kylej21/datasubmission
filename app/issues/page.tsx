@@ -1,8 +1,6 @@
 'use client'
 import {useForm, Controller} from "react-hook-form";
 import { TextField, Button, Callout } from '@radix-ui/themes';
-import SimpleMDE from "react-simplemde-editor";
-import "easymde/dist/easymde.min.css";
 import axios from 'axios';
 import {useState} from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,9 +35,8 @@ const submitPage = () => {
             onSubmit={handleSubmit(async (data)=>{
                 try {
                     await axios.post('/api/issues',data);
-                    console.log(data);
                 } catch (error) {
-                    setError('An unexpected error occured.');
+                    setError('The database must be hosted');
                 }
 
               })}>
